@@ -1,0 +1,23 @@
+{
+  "name": "hapi-hello-world",
+  "version": "1.0.0",
+  "description": "simple docker image for hello world using hapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jones2026/hapi-hello-world.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jones2026/hapi-hello-world/issues"
+  },
+  "homepage": "https://github.com/jones2026/hapi-hello-world#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.1"
+  }
+}
