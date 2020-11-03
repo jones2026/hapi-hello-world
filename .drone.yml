@@ -26,6 +26,8 @@ steps:
 
 - name: publish_docker
   image: plugins/docker
+  environment:
+    DOCKER_BUILDKIT: 1
   settings:
     auto_tag: true
     cache_from: ${DRONE_REPO,,}:latest
