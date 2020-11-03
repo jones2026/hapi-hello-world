@@ -14,7 +14,7 @@ steps:
   - hadolint - < Dockerfile
 
 - name: build_docker
-  image: plugins/docker
+  image: plugins/docker:18.09
   settings:
     dry_run: true
     repo: validate
@@ -23,7 +23,7 @@ steps:
     - pull_request
 
 - name: publish_docker
-  image: plugins/docker
+  image: plugins/docker:18.09
   settings:
     auto_tag: true
     cache_from: ${DRONE_REPO,,}:latest
