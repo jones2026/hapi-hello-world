@@ -1,44 +1,44 @@
 ---
-    kind: pipeline
-    type: docker
-    name: build
-    
-    platform:
-      os: linux
-      arch: amd64
-    
-    steps:
-    - name: docker_lint
-      image: hadolint/hadolint:v1.18.2-debian
-      commands:
-      - hadolint - < Dockerfile
-    
-    - name: build_docker
-      image: plugins/docker
-      settings:
-        dry_run: true
-        repo: validate
-      when:
-        event:
-        - pull_request
-    
-    - name: publish_docker
-      image: plugins/docker
-      settings:
-        auto_tag: true
-        cache_from: ${DRONE_REPO,,}:latest
-        password:
-          from_secret: docker_password
-        repo: ${DRONE_REPO,,}
-        username:
-          from_secret: docker_username
-      when:
-        event:
-        - push
-        - tag
-    
-    trigger:
-      branch:
-      - main
-    
-    ...
+kind: pipeline
+type: docker
+name: build
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: docker_lint
+  image: hadolint/hadolint:v1.18.2-debian
+  commands:
+  - hadolint - < Dockerfile
+
+- name: build_docker
+  image: plugins/docker
+  settings:
+    dry_run: true
+    repo: validate
+  when:
+    event:
+    - pull_request
+
+- name: publish_docker
+  image: plugins/docker
+  settings:
+    auto_tag: true
+    cache_from: ${DRONE_REPO,,}:latest
+    password:
+      from_secret: docker_password
+    repo: ${DRONE_REPO,,}
+    username:
+      from_secret: docker_username
+  when:
+    event:
+    - push
+    - tag
+
+trigger:
+  branch:
+  - main
+
+...
