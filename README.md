@@ -1,6 +1,6 @@
-![Drone (cloud)](https://img.shields.io/drone/build/jones2026/hapi-hello-world)
-![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/jones2026/hapi-hello-world)
-![Docker Pulls](https://img.shields.io/docker/pulls/jones2026/hapi-hello-world)
+[![Drone (cloud)](https://img.shields.io/drone/build/jones2026/hapi-hello-world)](https://cloud.drone.io/jones2026/hapi-hello-world)
+[![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/jones2026/hapi-hello-world)](https://hub.docker.com/r/jones2026/hapi-hello-world/tags?page=1&ordering=last_updated)
+[![Docker Pulls](https://img.shields.io/docker/pulls/jones2026/hapi-hello-world)](https://hub.docker.com/r/jones2026/hapi-hello-world)
 
 # hapi-hello-world
 simple docker image for hello world using hapi
