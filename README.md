@@ -1,2 +1,15 @@
+![Drone (cloud)](https://img.shields.io/drone/build/jones2026/hapi-hello-world)
+![Docker Image Size (latest semver)](https://img.shields.io/docker/image-size/jones2026/hapi-hello-world)
+![Docker Pulls](https://img.shields.io/docker/pulls/jones2026/hapi-hello-world)
+
 # hapi-hello-world
 simple docker image for hello world using hapi
+
+
+## Running your Hello World docker image
+Start your image:
+
+	$ docker run -d -p 8080:8080 jones2026/hapi-hello-world
+    3e1a2b32e73114333d362ffbb71d4bf13375f8c30e80c622540f58ebbb75ce08
+	$ curl http://localhost:8080/
+    Hello World!
